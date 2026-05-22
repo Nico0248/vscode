@@ -97,7 +97,6 @@ const AGENT_HOST_SKILL_BUTTONS: readonly IAgentHostSkillButtonSpec[] = [
 		extraWhen: ContextKeyExpr.and(
 			ActiveSessionContextKeys.IsolationMode.isEqualTo(IsolationMode.Worktree),
 			ActiveSessionContextKeys.HasUncommittedChanges,
-			ActiveSessionContextKeys.HasGitOperationInProgress.negate(),
 		),
 	},
 	{
@@ -115,7 +114,6 @@ const AGENT_HOST_SKILL_BUTTONS: readonly IAgentHostSkillButtonSpec[] = [
 				ActiveSessionContextKeys.HasIncomingChanges,
 				ActiveSessionContextKeys.HasOutgoingChanges,
 			),
-			ActiveSessionContextKeys.HasGitOperationInProgress.negate(),
 		),
 	},
 	{
